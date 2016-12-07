@@ -31,8 +31,6 @@ let POKEDEX = 0;
 let TYPE = 1;
 let EVOLUTION = 2;
 
-var debug;
-
 var json;
 
 var index;
@@ -41,12 +39,6 @@ var correctAnswers;
 //endregion
 	
 //region Helpers
-	function alertDebug(string) {
-		if (debug) {
-			alert(string);
-		}
-	}
-	
 	function bind(id) { // shortcut for document.getElementById
 	  	return document.getElementById(id);
 	}
@@ -105,8 +97,6 @@ var correctAnswers;
 	
 		count = 0;
 		points = 0;
-	
-		debug = false;
 		
 		time = 0;
 		
@@ -322,7 +312,7 @@ var correctAnswers;
 		
 		switch(variations[index]) {
 			case POKEDEX:
-				question = "Cual es el numer de entrada Podedex de ";
+				question = "Cual es el número Podedex de ";
 				break;
 			case TYPE:
 				question = "Cual es el el primer tipo de ";
@@ -417,7 +407,6 @@ var correctAnswers;
 		var id = -1;
 		i = -1;
 		while (++i < 4 && id < 0) {
-			alertDebug("id: " + i)
 			if (buttons[i] == this) {
 				id = i;
 			}
@@ -438,7 +427,7 @@ var correctAnswers;
 		if (index < num) {
 			switch (tp) {
 				case "tipos":
-					setUpTypeQuestions();
+					setUpTypeQuestion();
 					break;
 				default:
 					setUpPokemonQuestion();
