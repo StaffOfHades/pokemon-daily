@@ -287,7 +287,7 @@ var correctAnswers;
 		
 		switch(variations[index]) {
 			case POKEDEX:
-				question = "Cual es el número de entrada Podedex de ";
+				question = "Cual es el número Podedex de ";
 				break;
 			case TYPE:
 				question = "Cual es el el primer tipo de ";
